@@ -42,13 +42,16 @@ Copy code
 ```bash
 git clone git@github.com:Imsadiyy/2048-game.git
 cd 2048-game
-2. Run locally with Python
+```
 
+2. Run locally with Python
+```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 python app.py
+```
 
 Open in browser:
 
@@ -57,23 +60,30 @@ http://<VM_IP>:5000
 
 3. Dockerize the app
 Build Docker image
-
+```bash
 docker build -t 1024-game:1.0 .
 Run container
 
 docker run -d -p 5000:5000 --name 1024-game 1024-game:1.0
+```
 Stop / Remove container
-\
+```bash
 docker stop 1024-game
 docker rm 1024-game
-4. Optional: Push to Docker Hub
+```
 
+4. Optional: Push to Docker Hub
+```bash
 docker tag 1024-game:1.0 yourdockerhubusername/1024-game:1.0
 docker push yourdockerhubusername/1024-game:1.0
+```
+
 5. Optional: Kubernetes (Minikube)
 
+```bash
 eval $(minikube docker-env)
 docker build -t 1024-game:1.0 .
+```
 
 # Use image in your K8s manifests
 🎯 How to Play
