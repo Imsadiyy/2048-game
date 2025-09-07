@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>1024 Game</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>1024 Game</h1>
+    <div class="controls">
+      <button id="newGame">New Game</button>
+      <div class="score">Score: <span id="score">0</span></div>
+    </div>
+
+    <div id="board" class="board"></div>
+
+    <div class="instructions">
+      <p>Use arrow keys to move tiles. Combine identical tiles to reach <strong>1024</strong>.</p>
+    </div>
+
+    <div id="message" class="message"></div>
+  </div>
+
+  <script src="/static/game.js"></script>
+</body>
+</html>
