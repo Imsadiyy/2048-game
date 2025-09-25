@@ -1,10 +1,10 @@
 import pytest
-import app
+import app   # instead of from app import app
 
 @pytest.fixture
 def client():
-    app.testing = True
-    with app.test_client() as client:
+    app.app.testing = True
+    with app.app.test_client() as client:   # note app.app here
         yield client
 
 def test_index_returns_200(client):
